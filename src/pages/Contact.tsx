@@ -204,10 +204,10 @@ const Contact = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 className="bg-green-600 hover:bg-green-700 gap-2"
-                onClick={() => window.open('tel:8239455643', '_self')}
+                onClick={() => window.open('https://wa.me/918239455643', '_blank')}
               >
                 <MessageCircle className="h-4 w-4" />
-                WhatsApp: 8239455643
+                WhatsApp
               </Button>
               <Button 
                 variant="outline" 
