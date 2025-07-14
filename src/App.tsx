@@ -10,15 +10,21 @@ import TestimonialsPage from "./pages/TestimonialsPage";
 import Book from "./pages/Book";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import FloatingButtons from "./components/FloatingButtons";
+import { useGsapAnimations } from "./hooks/useGsapAnimations";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const App = () => {
+  // Initialize GSAP global animations
+  useGsapAnimations();
+  return (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <FloatingButtons />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
@@ -32,6 +38,7 @@ const App = () => (
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
-);
+  );
+};
 
 export default App;

@@ -80,9 +80,10 @@ const Book = () => {
                         </li>
                       ))}
                     </ul>
-                    <Button className="w-full bg-spiritual-saffron hover:bg-spiritual-saffron/90">
+                    <a href="#reservation-form" className="block">
+                      <Button className="w-full bg-spiritual-saffron hover:bg-spiritual-saffron/90">
                       Book Now
-                    </Button>
+                    </Button></a>
                   </CardContent>
                 </Card>
               ))}
@@ -109,7 +110,7 @@ const Book = () => {
         </section>
 
         {/* Booking Form Section */}
-        <section className="py-16 bg-background">
+        <section id="reservation-form" className="py-16 bg-background">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-2xl mx-auto">
               <Card className="border-none shadow-warm">

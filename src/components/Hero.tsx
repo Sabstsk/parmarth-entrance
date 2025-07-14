@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Phone, MessageCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import heroImage from '@/assets/parmarth-entrance.jpg';
 
 const Hero = () => {
@@ -28,13 +29,15 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
-            <Button 
-              size="lg" 
-              className="bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-4 text-lg shadow-warm"
-            >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              BOOK NOW
-            </Button>
+            <Link to="/book" className="w-full sm:w-auto">
+              <Button 
+                size="lg" 
+                className="bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-4 text-lg shadow-warm w-full sm:w-auto"
+              >
+                <MessageCircle className="mr-2 h-5 w-5" />
+                BOOK NOW
+              </Button>
+            </Link>
             
             <Button 
               size="lg" 

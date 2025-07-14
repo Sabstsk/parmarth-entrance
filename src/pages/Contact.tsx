@@ -3,8 +3,10 @@ import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { MapPin, Phone, Mail, Clock, MessageCircle, Send } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
+  const navigate = useNavigate();
   const contactInfo = [
     {
       icon: MapPin,
@@ -29,10 +31,10 @@ const Contact = () => {
   ];
 
   const quickLinks = [
-    { title: 'WhatsApp Booking', description: 'Instant response for room bookings', action: 'Chat Now' },
-    { title: 'Program Inquiry', description: 'Learn about our spiritual programs', action: 'Learn More' },
-    { title: 'Group Bookings', description: 'Special rates for groups of 10+', action: 'Get Quote' },
-    { title: 'Volunteer Program', description: 'Join our seva (service) community', action: 'Apply Now' }
+    { title: 'WhatsApp Booking', description: 'Instant response for room bookings', action: 'Chat Now', handler: () => window.open('https://wa.me/918239455643', '_blank') },
+    { title: 'Program Inquiry', description: 'Learn about our spiritual programs', action: 'Learn More', handler: () => navigate('/about') },
+    { title: 'Group Bookings', description: 'Special rates for groups of 10+', action: 'Get Quote', handler: () => window.open('mailto:bookings@parmarthniketan.org', '_self') },
+    { title: 'Volunteer Program', description: 'Join our seva (service) community', action: 'Apply Now', handler: () => navigate('/about') }
   ];
 
   return (
@@ -143,7 +145,7 @@ const Contact = () => {
                     ></textarea>
                   </div>
 
-                  <Button className="w-full bg-spiritual-saffron hover:bg-spiritual-saffron/90 gap-2">
+                  <Button className="w-full bg-spiritual-saffron hover:bg-spiritual-saffron/90 gap-2" onClick={() => window.open('mailto:info@parmarthniketan.org','_self')}>
                     <Send className="h-4 w-4" />
                     Send Message
                   </Button>
@@ -179,7 +181,7 @@ const Contact = () => {
                             <h4 className="font-semibold text-foreground">{link.title}</h4>
                             <p className="text-sm text-muted-foreground">{link.description}</p>
                           </div>
-                          <Button variant="outline" size="sm">
+                          <Button variant="outline" size="sm" onClick={link.handler}>
                             {link.action}
                           </Button>
                         </div>

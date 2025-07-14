@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import { MessageCircle, Phone, Calendar } from 'lucide-react';
 
 const CTA = () => {
@@ -19,13 +20,15 @@ const CTA = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-white text-spiritual-saffron hover:bg-white/90 font-semibold px-8 py-4 text-lg shadow-warm min-w-[200px]"
-            >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Book Your Stay
-            </Button>
+            <Link to="/book" className="min-w-[200px]">
+              <Button 
+                size="lg" 
+                className="w-full bg-white text-spiritual-saffron hover:bg-white/90 font-semibold px-8 py-4 text-lg shadow-warm"
+              >
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Book Your Stay
+              </Button>
+            </Link>
             
             <Button 
               size="lg" 
@@ -37,14 +40,16 @@ const CTA = () => {
               Call Us Now
             </Button>
             
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-white text-white hover:bg-white/10 font-semibold px-8 py-4 text-lg min-w-[200px]"
-            >
-              <Calendar className="mr-2 h-5 w-5" />
-              View Programs
-            </Button>
+            <Link to="/about" className="min-w-[200px]">
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="w-full border-white text-white hover:bg-white/10 font-semibold px-8 py-4 text-lg"
+              >
+                <Calendar className="mr-2 h-5 w-5" />
+                View Programs
+              </Button>
+            </Link>
           </div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
