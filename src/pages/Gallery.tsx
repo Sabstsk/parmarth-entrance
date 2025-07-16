@@ -1,4 +1,5 @@
 import Header from '@/components/Header';
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '@/components/Footer';
@@ -261,11 +262,10 @@ const Gallery = () => {
         <section className="py-20 bg-gradient-peaceful">
           <div className="container mx-auto px-4 lg:px-8 text-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              Sacred <span className="text-spiritual-saffron">Moments</span>
+              Sacred <span className="text-spiritual-saffron">Spaces</span> of Parthmarthashram
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Discover the beauty and serenity of life at Parmarth Niketan through 
-              our collection of sacred moments and peaceful spaces.
+              Immerse yourself in the divine beauty and spiritual energy of Parthmarthashram through our collection of sacred moments and tranquil spaces.
             </p>
           </div>
         </section>
@@ -276,52 +276,54 @@ const Gallery = () => {
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {categories.map((category) => (
-                <button
+                <motion.button
                   key={category}
-                  className="px-6 py-2 rounded-full border border-spiritual-saffron text-spiritual-saffron hover:bg-spiritual-saffron hover:text-white transition-colors duration-200"
+                  className="gs-reveal px-6 py-2 rounded-full border border-spiritual-saffron text-spiritual-saffron hover:bg-spiritual-saffron hover:text-white transition-colors duration-200"
+                  whileHover={{ scale: 1.05 }}
                 >
                   {category}
-                </button>
+                </motion.button>
               ))}
             </div>
 
             {/* Gallery Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {galleryItems.slice(0, visibleCount).map((item) => (
-                <Card key={item.id} className="group overflow-hidden border-none shadow-gentle hover:shadow-warm transition-all duration-300">
-                  <div className="relative overflow-hidden">
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.5, ease: 'easeOut' }}
+                  className="gs-reveal"
+                >
+                  <Card
+                    className="overflow-hidden border-none shadow-gentle hover:shadow-warm transition-all duration-300"
+                  >
                     <img
                       src={item.image}
-                      alt={item.title}
+                      alt={`Gallery image ${item.id}`}
                       loading="lazy"
                       onError={(e) => {
                         const target = e.currentTarget as HTMLImageElement;
                         target.onerror = null;
                         target.src = placeholderImg;
                       }}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-64 object-cover"
                     />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-spiritual-saffron text-white px-3 py-1 rounded-full text-sm font-medium">
-                        {item.category}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground">{item.description}</p>
-                  </div>
-                </Card>
+                  </Card>
+                </motion.div>
               ))}
             </div>
 
             {/* Load More Button */}
             <div className="text-center mt-12">
               {visibleCount < galleryItems.length && (
-                <button onClick={loadMore} className="bg-spiritual-saffron text-white px-8 py-3 rounded-full hover:bg-spiritual-saffron/90 transition-colors duration-200 font-medium">
+                <motion.button
+                  onClick={loadMore}
+                  className="gs-reveal bg-spiritual-saffron text-white px-8 py-3 rounded-full hover:bg-spiritual-saffron/90 transition-colors duration-200 font-medium">
                   Load More Images
-                </button>
+                </motion.button>
               )}
             </div>
           </div>
