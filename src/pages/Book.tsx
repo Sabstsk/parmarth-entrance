@@ -171,7 +171,7 @@ const Book = () => {
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button 
                       className="flex-1 bg-spiritual-saffron hover:bg-spiritual-saffron/90 gap-2"
-                      onClick={() => window.open('https://wa.me/918239455643', '_blank')}
+                      onClick={() => window.open('https://wa.me/916003282464', '_blank')}
                     >
                       <MessageCircle className="h-4 w-4" />
                       Book via WhatsApp
@@ -179,7 +179,7 @@ const Book = () => {
                     <Button 
                       variant="outline" 
                       className="flex-1 gap-2"
-                      onClick={() => window.open('tel:8239455643', '_self')}
+                      onClick={() => window.open('tel:6003282464', '_self')}
                     >
                       <Phone className="h-4 w-4" />
                       Call to Book

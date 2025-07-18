@@ -44,7 +44,7 @@ const Header = () => {
               variant="outline" 
               size="sm" 
               className="gap-2"
-              onClick={() => window.open('tel:8239455643', '_self')}
+              onClick={() => window.open('tel:6003282464', '_self')}
             >
               <Phone className="h-4 w-4" />
               Call Us
@@ -78,7 +78,7 @@ const Header = () => {
                 variant="outline" 
                 size="sm" 
                 className="gap-2 w-fit"
-                onClick={() => window.open('tel:8239455643', '_self')}
+                onClick={() => window.open('tel:6003282464', '_self')}
               >
                 <Phone className="h-4 w-4" />
                 Call Us

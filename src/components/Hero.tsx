@@ -43,7 +43,7 @@ const Hero = () => {
               size="lg" 
               variant="outline"
               className="bg-spiritual-gold hover:bg-spiritual-gold/90 text-spiritual-earth border-spiritual-gold font-semibold px-8 py-4 text-lg"
-              onClick={() => window.open('tel:8239455643', '_self')}
+              onClick={() => window.open('tel:6003282464', '_self')}
             >
               <Phone className="mr-2 h-5 w-5" />
               CALL US NOW

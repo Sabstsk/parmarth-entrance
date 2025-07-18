@@ -34,7 +34,7 @@ const CTA = () => {
               size="lg" 
               variant="outline"
               className="border-white text-white hover:bg-white/10 font-semibold px-8 py-4 text-lg min-w-[200px]"
-              onClick={() => window.open('tel:8239455643', '_self')}
+              onClick={() => window.open('tel:6003282464', '_self')}
             >
               <Phone className="mr-2 h-5 w-5" />
               Call Us Now

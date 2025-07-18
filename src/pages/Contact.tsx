@@ -70,7 +70,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['8239455643', '8239455643'],
+      details: ['6003282464', '6003282464'],
     },
     {
       icon: Mail,
@@ -89,7 +89,7 @@ const Contact = () => {
       title: 'WhatsApp Booking',
       description: 'Instant response for room bookings',
       action: 'Chat Now',
-      handler: () => window.open('https://wa.me/918239455643', '_blank'),
+      handler: () => window.open('https://wa.me/916003282464', '_blank'),
     },
     {
       title: 'Program Inquiry',
@@ -293,14 +293,14 @@ const Contact = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 className="bg-green-600 hover:bg-green-700 gap-2"
-                onClick={() => window.open('https://wa.me/918239455643', '_blank')}
+                onClick={() => window.open('https://wa.me/916003282464', '_blank')}
               >
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp
               </Button>
-              <Button variant="outline" className="gap-2" onClick={() => window.open('tel:8239455643', '_self')}>
+              <Button variant="outline" className="gap-2" onClick={() => window.open('tel:6003282464', '_self')}>
                 <Phone className="h-4 w-4" />
-                Call: 8239455643
+                Call: 6003282464
               </Button>
             </div>
           </div>

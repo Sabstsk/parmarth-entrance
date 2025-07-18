@@ -43,7 +43,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-spiritual-gold" />
-                <span className="text-white/80 text-sm">8239455643</span>
+                <span className="text-white/80 text-sm">6003282464</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-spiritual-gold" />
@@ -70,7 +70,7 @@ const Footer = () => {
         <div className="border-t border-white/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-white/60 text-sm mb-4 md:mb-0">
-              © 2024 Parmarth Niketan Ashram. All rights reserved.
+              2024 Parmarth Niketan Ashram. All rights reserved.
             </p>
             <p className="text-white/60 text-sm flex items-center gap-1">
               Made with <Heart className="h-4 w-4 text-red-400" /> for spiritual seekers worldwide

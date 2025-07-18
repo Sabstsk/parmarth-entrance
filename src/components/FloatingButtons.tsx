@@ -6,7 +6,7 @@ import React from 'react';
  * Place the component near the root of the application (e.g., in App.tsx) so it appears on all pages.
  */
 const FloatingButtons: React.FC = () => {
-  const phoneNumber = '8239455643';
+  const phoneNumber = '6003282464';
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   return (
